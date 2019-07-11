@@ -53,6 +53,7 @@ import jnum.math.Additive;
 import jnum.math.Complex;
 import jnum.math.LinearAlgebra;
 import jnum.math.Multiplicative;
+import jnum.math.RealAddition;
 import jnum.math.Scalar;
 import jnum.math.Scalable;
 import jnum.text.BracketedListTokenizer;
@@ -1008,13 +1009,13 @@ public final class ArrayUtil {
 	}
 
 
-	public static <T extends Scalable> Object offset(double constant, T... data) {
-		return scale(Arrays.asList(data), constant).toArray();
+	public static <T extends RealAddition> Object offset(double constant, T... data) {
+		return offset(Arrays.asList(data), constant).toArray();
 	}	
 
 
-	public static <T extends Scalable> List<T> offset(List<T> data, double constant) {
-		for(T element : data) element.scale(constant);
+	public static <T extends RealAddition> List<T> offset(List<T> data, double constant) {
+		for(T element : data) element.addReal(constant);
 		return data;
 	}
 
@@ -1075,7 +1076,7 @@ public final class ArrayUtil {
 
 
 	public static float[] multiplyBy(float[] data, double[] factor) throws IndexOutOfBoundsException {
-		for(int i=data.length; --i >= 0; ) data[i] += factor[i];
+		for(int i=data.length; --i >= 0; ) data[i] *= factor[i];
 		return data;
 	}
 

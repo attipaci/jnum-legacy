@@ -143,14 +143,7 @@ Multiplication<Gaussian1D>, Division<Gaussian1D>, Product<Gaussian1D, Gaussian1D
         final double dev = dx * Constant.sigmasInFWHM / FWHM;
         return Math.exp(-0.5 * (dev * dev));
     }
-    
-    
-    public Referenced1D getBeam(Grid1D grid) { return getBeam(grid, 3.0); }
 
-
-    public Referenced1D getBeam(Grid1D grid, double sigmas) { 
-        return getBeam(FWHM, grid, sigmas);
-    }
 
     
     @Override
@@ -235,17 +228,17 @@ Multiplication<Gaussian1D>, Division<Gaussian1D>, Product<Gaussian1D, Gaussian1D
     }
 
 
-    public static Referenced1D getBeam(double FWHM, Grid1D grid) {
-        return getBeam(FWHM, grid, 3.0);
+    public static Referenced1D getBeam(double FWHM) {
+        return getBeam(FWHM, 3.0);
     }   
 
 
-    public static Referenced1D getBeam(double FWHM, Grid1D grid, double sigmas) {     
-        int size = 2 * (int)Math.ceil(sigmas * Math.abs(FWHM) / grid.getResolution().value()) + 1;
+    public static Referenced1D getBeam(double FWHM, double sigmas) {     
+        int size = 2 * (int)Math.ceil(sigmas * Math.abs(FWHM)) + 1;
        
         final Samples1D image = Samples1D.createType(Double.class, size);
         final double sigma = FWHM / Constant.sigmasInFWHM;
-        final double A = -0.5 * grid.getResolution().value() * grid.getResolution().value() / (sigma * sigma);
+        final double A = -0.5 / (sigma * sigma);
         final double center = (size-1) / 2.0;
 
         for(int i=size; --i >= 0; ) {

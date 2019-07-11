@@ -317,6 +317,10 @@ public abstract class Samples1D extends Data1D implements Serializable, Resizabl
         private double[] data;
 
         
+        public Double1D() { this(null); }
+        
+        public Double1D(double[] data) { this.data = data; }
+        
         @Override
         public Number getLowestCompareValue() { return Double.NEGATIVE_INFINITY; }
         
@@ -389,6 +393,10 @@ public abstract class Samples1D extends Data1D implements Serializable, Resizabl
   
         private float[] data;
 
+        
+        public Float1D() { this(null); }
+        
+        public Float1D(float[] data) { this.data = data; }
         
         @Override
         public Number getLowestCompareValue() { return Float.NEGATIVE_INFINITY; }
@@ -464,6 +472,10 @@ public abstract class Samples1D extends Data1D implements Serializable, Resizabl
         
         private long[] data;
 
+        
+        public Long1D() { this(null); }
+        
+        public Long1D(long[] data) { this.data = data; }
 
         @Override
         public Class<? extends Number> getElementType() {
@@ -522,6 +534,10 @@ public abstract class Samples1D extends Data1D implements Serializable, Resizabl
         private int[] data;
 
 
+        public Integer1D() { this(null); }
+        
+        public Integer1D(int[] data) { this.data = data; }
+        
         @Override
         public Class<? extends Number> getElementType() {
             return Integer.class;
@@ -579,6 +595,10 @@ public abstract class Samples1D extends Data1D implements Serializable, Resizabl
         private short[] data;
 
 
+        public Short1D() { this(null); }
+        
+        public Short1D(short[] data) { this.data = data; }
+        
         @Override
         public Class<? extends Number> getElementType() {
             return Short.class;
@@ -633,6 +653,9 @@ public abstract class Samples1D extends Data1D implements Serializable, Resizabl
         
         private byte[] data;
 
+        public Byte1D() { this(null); }
+        
+        public Byte1D(byte[] data) { this.data = data; }
 
         @Override
         public Class<? extends Number> getElementType() {

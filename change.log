@@ -1,4 +1,14 @@
-0.23-2 (legacy)
+legacy 0.23-2 (11 July 2019)
+
+	Overview
+	======================================================================
+	This legacy branch of jnum was created to accompany the legacy versions
+	of CRUSH, which in turn continue to offer limited support for 
+	astronomical cameras that are no longer supported by the leading edge
+	CRUSH releases (>= 2.50).
+	For all other purposes, you should be looking at the master branch,
+	where all new development is taking place.
+	======================================================================
 
 	[FIX] Map2D did not write some standard FITS header info. (back port
 	from master)

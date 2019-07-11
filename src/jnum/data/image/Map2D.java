@@ -542,6 +542,8 @@ public class Map2D extends Flagged2D implements Resizable<Index2D>, Serializable
         
     @Override
     public void editHeader(Header header) throws HeaderCardException {   
+        if(fitsProperties != null) fitsProperties.editHeader(header);
+        
         editCoordinateInfo(header);
         
         Gaussian2D psf = getImageBeam();

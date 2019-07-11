@@ -1,5 +1,8 @@
 0.23-2 (legacy)
 
+	[FIX] Map2D did not write some standard FITS header info. (back port
+	from master)
+
 	[FIX] Fix ArrayUtil offset() and multiplyBy bugs (back port from 
 	master branch)
 
@@ -18,11 +21,17 @@
 
 	[FIX] Flagged2D/Observation2D parallel processing control
 
+	[TWEAK] Updated Doppler color scheme. (back port from master).
+
 	[TWEAK] {Samples1D} Constructors with like primirive arrays as data.
 	(back port from master)
 
 	[TWEAK] {Gaussian1D} Simplified API for generating beams. (back port
 	from master)
+
+	[PRUNE] Removed 'devel' packages. (No development will take place on
+	the legacy branch.)
+
 
 0.23-1
 

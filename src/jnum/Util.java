@@ -54,9 +54,9 @@ public final class Util {
 
     public final static String version = "0.23-2";
     
-    public final static String revision = "legacy:devel.2";
+    public final static String revision = "devel.3";
     
-    public final static String copyright = "(c)2018 Attila Kovacs"; 
+    public final static String copyright = "(c)2019 Attila Kovacs"; 
     
     public final static String copyrightEmail = "<attila[AT]sigmyne.com>"; 
 
@@ -515,10 +515,14 @@ public final class Util {
     }
 
 
+    public static String getVersion() {
+        return "legacy " + version;
+    }
+    
     public static String getFullVersion() {
-        if(revision == null) return version;
-        if(revision.length() == 0) return version;
-        return version + " (" + revision + ")";
+        if(revision == null) return getVersion();
+        if(revision.length() == 0) return getVersion();
+        return getVersion() + " (" + revision + ")";
     }
 
 

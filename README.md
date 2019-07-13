@@ -1,4 +1,4 @@
-# JNUM
+# JNUM (Legacy Version)
 
 Author: Attila Kovacs <attila[AT]sigmyne.com>
 
@@ -7,9 +7,9 @@ Author: Attila Kovacs <attila[AT]sigmyne.com>
 
 ## Important Note
 
-This is a **legacy** branch of **jnum**, created with the sole purpose of 
-accompanying legacy **CRUSH** releases, with support for several astronomical
-cameras whose support was dropped with CRUSH 2.50 (or after). For any other
+This is a **legacy** fork of **jnum**, created with the sole purpose of 
+accompanying legacy **CRUSH** releases ([crush-legacy](http:github.com/attipaci/crush-legacy) repo), with support for several astronomical
+cameras whose support was dropped from the mainline CRUSH at version 2.50 (or after). For any other
 purposes, you should be using the main-line **master** branch, where all new
 development is taking place.
 

@@ -52,7 +52,7 @@ import jnum.text.TimeFormat;
 public final class Util {
 
 
-    public final static String version = "0.23-2";
+    public final static String version = "0.23-3";
     
     public final static String revision = "";
     
